@@ -1,0 +1,252 @@
+<!doctype html>
+<html dir="ltr" lang="en-US">
+
+<!--=============================================-->
+<!--=============================================-->
+<!--=============================================-->
+
+<head>
+
+  <!-------------------------------------------
+  Required meta tags
+  -------------------------------------------->
+  
+    <meta charset="utf-8">
+    <!--just for auto-refresh in dev use the following meta tag-->
+    <!--<meta http-equiv="refresh" content="10" />-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes">
+    <meta name="author" content="#teamAwesome" />
+    <meta name="description" content="#"/> 
+    <meta name="keywords" content="#"/>
+    <link rel="shortcut icon" type="image/ico" href="assets/images/party.ico" />
+	
+  <!-------------------------------------------
+  Stylesheets
+  -------------------------------------------->
+    <!--Reset CSS-->
+    	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!--Other CSS-->
+    	<link rel="stylesheet" type="text/css" href="assets/css/w3.css">
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Developer CSS-->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  
+  <!-------------------------------------------
+  JavaScript
+  -------------------------------------------->
+  
+  
+  
+  <!-------------------------------------------
+  Document Title
+  -------------------------------------------->
+  <title>#</title>
+
+</head>
+
+<!--=============================================-->
+<!--=============================================-->
+<!--=============================================-->
+
+<body>
+  
+  <!-------------------------------------------
+  Document Wrapper
+  -------------------------------------------->
+<div class="w3-top">
+	<header>
+		
+		<nav>
+
+			<div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-round-large w3-margin" style="display:none;" id="leftMenu">
+				<button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-xlarge w3-dark-gray"><i class="fa fa-close"></i></button>
+				<div class="w3-bar w3-black w3-padding-small">MENU</div>
+				<a href="#" class="w3-bar-item w3-button w3-large"><i class="fa fa-home w3-text-red"></i> HOME</a>
+				<a href="#about" class="w3-bar-item w3-button w3-large"><i class="fa fa-code w3-text-red"></i> ABOUT</a>
+			</div>
+
+			<div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-round-large w3-margin" style="display:none;right:0;width:60%;" id="rightMenu">
+				
+				<button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large"><i class="fa fa-close w3-xlarge w3-text-red w3-round-large w3-padding-large w3-light-gray
+					"></i> Close My List</button>
+				<ul class="w3-ul">
+					<li class="w3-bar w3-card-2 w3-margin">
+						<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-xlarge w3-right w3-circle w3-margin"><i class="fa fa-close"></i></span>
+						<div><img src="assets/images/shopping/cut.svg" class="w3-bar-item w3-circle w3-hide-small w3-left" style="width:85px"></div>
+						<div class="w3-bar-item">
+						<span class="w3-large">Onion</span><br>
+						<span>2 to 3 large size</span>
+						</div>
+					</li>
+					<li class="w3-bar w3-card-2 w3-margin">
+						<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-xlarge w3-right w3-circle w3-margin"><i class="fa fa-close"></i></span>
+						<div><img src="assets/images/shopping/cold.svg" class="w3-bar-item w3-circle w3-hide-small w3-left" style="width:85px"></div>
+						<div class="w3-bar-item">
+						<span class="w3-large">Chicken</span><br>
+						<span>Large size serve for 4 people</span>
+						</div>
+					</li>
+					<li class="w3-bar w3-card-2 w3-margin">
+						<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-xlarge w3-right w3-circle w3-margin"><i class="fa fa-close"></i></span>
+						<div><img src="assets/images/shopping/mixer.svg" class="w3-bar-item w3-circle w3-hide-small w3-left" style="width:85px"></div>
+						<div class="w3-bar-item">
+						<span class="w3-large">Whole-wheat flour</span><br>
+						<span>5 cups (600 g)</span>
+						</div>
+					</li>
+					<li class="w3-bar w3-card-2 w3-margin">
+						<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-xlarge w3-right w3-circle w3-margin"><i class="fa fa-close"></i></span>
+						<div><img src="assets/images/shopping/cut.svg" class="w3-bar-item w3-circle w3-hide-small w3-left" style="width:85px"></div>
+						<div class="w3-bar-item">
+						<span class="w3-large">Onion</span><br>
+						<span>2 to 3 large size</span>
+						</div>
+					</li>
+					<li class="w3-bar w3-card-2 w3-margin">
+						<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-xlarge w3-right w3-circle w3-margin"><i class="fa fa-close"></i></span>
+						<div><img src="assets/images/shopping/cold.svg" class="w3-bar-item w3-circle w3-hide-small w3-left" style="width:85px"></div>
+						<div class="w3-bar-item">
+						<span class="w3-large">Chicken</span><br>
+						<span>Large size serve for 4 people</span>
+						</div>
+					</li>
+					<li class="w3-bar w3-card-2 w3-margin">
+						<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-xlarge w3-right w3-circle w3-margin"><i class="fa fa-close"></i></span>
+						<div><img src="assets/images/shopping/mixer.svg" class="w3-bar-item w3-circle w3-hide-small w3-left" style="width:85px"></div>
+						<div class="w3-bar-item">
+						<span class="w3-large">Whole-wheat flour</span><br>
+						<span>5 cups (600 g)</span>
+						</div>
+					</li>
+					<li class="w3-bar w3-card-2 w3-margin">
+						<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-xlarge w3-right w3-circle w3-margin"><i class="fa fa-close"></i></span>
+						<div><img src="assets/images/shopping/cut.svg" class="w3-bar-item w3-circle w3-hide-small w3-left" style="width:85px"></div>
+						<div class="w3-bar-item">
+						<span class="w3-large">Onion</span><br>
+						<span>2 to 3 large size</span>
+						</div>
+					</li>
+					<li class="w3-bar w3-card-2 w3-margin">
+						<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-xlarge w3-right w3-circle w3-margin"><i class="fa fa-close"></i></span>
+						<div><img src="assets/images/shopping/cold.svg" class="w3-bar-item w3-circle w3-hide-small w3-left" style="width:85px"></div>
+						<div class="w3-bar-item">
+						<span class="w3-large">Chicken</span><br>
+						<span>Large size serve for 4 people</span>
+						</div>
+					</li>
+					<li class="w3-bar w3-card-2 w3-margin">
+						<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-xlarge w3-right w3-circle w3-margin"><i class="fa fa-close"></i></span>
+						<div><img src="assets/images/shopping/mixer.svg" class="w3-bar-item w3-circle w3-hide-small w3-left" style="width:85px"></div>
+						<div class="w3-bar-item">
+						<span class="w3-large">Whole-wheat flour</span><br>
+						<span>5 cups (600 g)</span>
+						</div>
+					</li>				
+				</ul>
+				<button class="w3-bar-item w3-button w3-large"><i class="fa fa-mobile-phone w3-xlarge w3-text-red w3-round-large w3-padding-large w3-light-gray"></i> SMS My List</button>
+			</div>
+
+			<div>
+				<button class="w3-btn w3-border w3-border-white w3-round-large w3-margin w3-xlarge w3-left w3-opacity-min w3-hover-opacity-off w3-red" onclick="openLeftMenu()"><i class="fa fa-bars w3-text-white"></i></button>
+				<button class="w3-btn w3-border w3-border-white w3-round-large w3-margin w3-xlarge w3-opacity-min w3-hover-opacity-off w3-red"><a href="#main"><img src="assets/images/check.svg" alt="" width="23"></a></button>
+				<button class="w3-btn w3-border w3-border-white w3-round-large w3-margin w3-xlarge w3-right w3-opacity-min w3-hover-opacity-off w3-red" onclick="openRightMenu()"><i class="fa fa-shopping-cart w3-text-white"></i></button>
+			</div>
+
+		</nav>
+	
+	</header>
+	
+</div>	
+	
+	
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <h1><span class="w3-center w3-padding-small w3-red w3-xxlarge w3-wide w3-animate-opacity w3-text-light-gray" id="myNavbar">&#160;LIST MY GROCERY</span></h1>
+  </div>
+</div>
+
+<!--Process after steps	-->
+<div class="w3-cell-row">
+	<div class="w3-content w3-container w3-padding-16 w3-cell w3-cell-middle w3-center w3-xlarge" id="main"><p>A SIMPLE WAY TO MAKE A LIST</p></div>
+</div>
+<div class="w3-cell-row w3-panel w3-topbar w3-bottombar w3-border-red" id="process">
+<div class="w3-container w3-cell w3-padding-large w3-center w3-pale-red"><a href="#main"><img src="assets/images/process/button.svg" alt="" width="50%"></a></div>
+<div class="w3-container w3-cell w3-padding-large w3-center"><a href="#main"><img src="assets/images/process/search.svg" alt="" width="50%"></a></div>
+<div class="w3-container w3-cell w3-padding-large w3-center"><a href="#main"><img src="assets/images/process/list.svg" alt="" width="50%"></a></div>
+<div class="w3-container w3-cell w3-padding-large w3-center"><a href="#main"><img src="assets/images/process/commerce.svg" alt="" width="50%"></a></div>
+<div class="w3-container w3-cell w3-padding-large w3-center"><a href="#main"><img src="assets/images/process/interface.svg" alt="" width="50%"></a></div>
+</div>
+	
+<!-- Container (Main Section) -->
+<div class="w3-content w3-container w3-padding-64" >
+	<div>
+		<p><h1>DECIDE</h1></p>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
+	
+	</div>
+	
+ 
+</div>
+
+<!-- Second Parallax Image with Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <h1><span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">FIND YOUR TEST</span></h1>
+  </div>
+</div>
+	
+<!-- Container (Main Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+	<div class="w3-cell-row w3-panel" id="mainList1">
+		<div class="w3-cell w3-light-grey w3-margin" style="width:50%;">
+			<div class="w3-container w3-center">
+				<h3>What do you have in your mind?</h3>
+				<img src="assets/images/party.svg" alt="Cooking New" style="width:50%; padding:10px 0;">
+				<h5>Cooking Someting New!</h5>
+				<div class="w3-section">
+				<button class="w3-button w3-border w3-border-red">Search</button>
+				</div>
+			</div>
+		</div>
+		<div class="w3-cell w3-light-blue w3-margin" style="width:50%;">
+			<div class="w3-container w3-center">
+				<h3>What do you have in your fridge?</h3>
+				<img src="assets/images/cold.svg" alt="Cooking New" style="width:50%; padding:10px 0;">
+				<h5>Cooking Someting from leftover!</h5>
+				<div class="w3-section">
+				<button class="w3-button w3-border w3-border-red">Search</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Footer -->
+<footer id="footer" class="w3-center w3-green w3-padding-16 w3-opacity w3-hover-black w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-hover-green w3-border w3-border-green w3-round "><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-text-green"></i>
+    <i class="fa fa-instagram w3-hover-text-green"></i>
+    <i class="fa fa-snapchat w3-hover-text-green"></i>
+    <i class="fa fa-pinterest-p w3-hover-text-green"></i>
+    <i class="fa fa-twitter w3-hover-text-green"></i>
+  </div>
+  <p>Powered by <a href="#" title="#teamAwesome" target="_blank" class="w3-hover-text-green">#teamAwesome</a></p>
+</footer>
+<!-------------------------------------------
+  External JavaScripts
+  -------------------------------------------->
+	<script src="assets/js/main.js" type="text/javascript"></script>
+
+</body>
+
+<!--=============================================-->
+<!--=============================================-->
+<!--=============================================-->
+
+</html>
