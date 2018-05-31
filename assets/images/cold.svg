@@ -1,47 +1,36 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
-<path style="fill:#A7ADB0;" d="M48.403,0H29v58h18.044h3.026c1.066,0,1.93-0.864,1.93-1.93V3.56C51.96,1.594,50.368,0,48.403,0z"/>
-<path style="fill:#727D82;" d="M9.56,0C7.594,0,6,1.594,6,3.56v52.51C6,57.136,6.864,58,7.93,58H29V0H9.56z"/>
-<line style="fill:none;stroke:#556080;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="40" y1="7" x2="42" y2="7"/>
-<rect x="10" y="27" style="fill:#556080;" width="15" height="10"/>
-<rect x="33" y="22" style="fill:#556080;" width="15" height="15"/>
-<rect x="10" y="34" style="fill:#38454F;" width="15" height="3"/>
-<rect x="13" y="27" style="fill:#FFFFFF;" width="3" height="4"/>
-<rect x="19" y="27" style="fill:#FFFFFF;" width="3" height="4"/>
-<line style="fill:none;stroke:#38454F;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="36" y1="26" x2="45" y2="26"/>
-<rect x="10" y="22" style="fill:#38454F;" width="15" height="5"/>
-<rect x="28" style="fill:#556080;" width="2" height="58"/>
+<style type="text/css">
+	.st0{fill:#A7ADB0;}
+	.st1{fill:#727D82;}
+	.st2{fill:none;stroke:#556080;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:#556080;}
+	.st4{fill:#38454F;}
+	.st5{fill:#FFFFFF;}
+	.st6{fill:none;stroke:#38454F;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st7{fill:#7B9BB1;}
+</style>
+<path class="st0" d="M47.1,0H28.3v56.2h17.5h2.9c1,0,1.9-0.8,1.9-1.9V3.4C50.5,1.5,49,0,47.1,0z"/>
+<path class="st1" d="M9.4,0C7.5,0,6,1.5,6,3.4v50.8c0,1,0.8,1.9,1.9,1.9h20.4V0H9.4z"/>
+<line class="st2" x1="38.9" y1="6.8" x2="40.9" y2="6.8"/>
+<rect x="9.9" y="26.1" class="st3" width="14.5" height="9.7"/>
+<rect x="32.1" y="21.3" class="st3" width="14.5" height="14.5"/>
+<rect x="9.9" y="32.9" class="st4" width="14.5" height="2.9"/>
+<rect x="12.8" y="26.1" class="st5" width="2.9" height="3.9"/>
+<rect x="18.6" y="26.1" class="st5" width="2.9" height="3.9"/>
+<line class="st6" x1="35" y1="25.2" x2="43.8" y2="25.2"/>
+<rect x="9.9" y="21.3" class="st4" width="14.5" height="4.8"/>
+<rect x="27.3" class="st3" width="1.9" height="56.2"/>
+<path class="st7" d="M41.2,57.1c0,0.5,0.4,0.9,0.9,0.9h4.6c0.5,0,0.9-0.4,0.9-0.9v-0.9h-6.4V57.1z"/>
+<path class="st7" d="M9,57.1C9,57.6,9.4,58,9.9,58h4.6c0.5,0,0.9-0.4,0.9-0.9v-0.9H9V57.1z"/>
 <g>
+	<path class="st7" d="M25.3,18.2v9.2c-0.5,0-0.9,0.4-0.9,0.9c0,0.5,0.4,0.9,0.9,0.9h0.9c0.5,0,0.9-0.4,0.9-0.9v-11
+		c0-0.5-0.4-0.9-0.9-0.9h-0.9c-0.5,0-0.9,0.4-0.9,0.9C24.4,17.8,24.8,18.2,25.3,18.2z"/>
 </g>
 <g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
+	<path class="st7" d="M31.1,27.4v-9.2c0.5,0,0.9-0.4,0.9-0.9c0-0.5-0.4-0.9-0.9-0.9h-0.9c-0.5,0-0.9,0.4-0.9,0.9v11
+		c0,0.5,0.4,0.9,0.9,0.9h0.9c0.5,0,0.9-0.4,0.9-0.9C32,27.8,31.6,27.4,31.1,27.4z"/>
 </g>
 </svg>
