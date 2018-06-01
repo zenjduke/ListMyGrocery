@@ -27,10 +27,10 @@ function closeRightMenu() {
     document.getElementById("rightMenu").style.display = "none";
 }
 
-//-----
+//----- masterList displays saved ingredients in Shopping List
 
-///// ingredientArray item appears as "1 tps sugar" 
-///// ingredientObject lists unit, amount and name in separate arrays ie. amount (1), unit (tps), and name (sugar)
+//-- ingredientArray item appears as "1 tps sugar" 
+//-- ingredientObject lists unit, amount and name in separate arrays ie. amount (1), unit (tps), and name (sugar)
 
 var masterList = [];
 
@@ -40,6 +40,7 @@ var masterObject = {
   name: [],
 }
 
+// ---------Ingredients for specific recipe stored here for display in Learn More panel
 var ingredientArray = [];
 
 var ingredientObject = {
@@ -48,7 +49,7 @@ var ingredientObject = {
   name: [],
 }
 
-// ---------myIngredient OBJECT For Added Recipes
+// ---------myIngredient OBJECT For Recipes Added By User
 
 var myIngredientObject = {
   amount: [],
@@ -98,7 +99,7 @@ var recipeApp = {
     if (event.target == modal) {
           modal.style.display = "none";
         }
-        console.log("made it x 2");
+        console.log("Opened New Recipe Search");
     
   },
 
@@ -130,8 +131,7 @@ var recipeApp = {
           modal.style.display = "none";
         }
     
-    console.log("Opened Add Recipe Modal");
-    
+    console.log("Opened Add Recipe Modal"); 
   },
 
     // ----- OPEN SEARCH BY INGREDIENT MODAL 
@@ -269,6 +269,7 @@ var recipeApp = {
 
   },
 
+  
   // Creates buttons for each ingredient in selected recipe. 
 
   listIngredients: function(){
@@ -577,9 +578,40 @@ var recipeApp = {
       
   },
 
+  // ----- OPEN USER ADDED RECIPE INGREDIENT
+  openUserAddedIngredients: function(){
+  
+      // Get the modal
+      var modal = document.getElementById('addedIngredientsModal');
+  
+      // Get the button that opens the modal
+      var btn = document.getElementById("addedIngredients");
+  
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("addedIngredientsClose")[0];
+  
+      // When the user clicks on the button, open the modal 
+  
+      modal.style.display = "block";
+      
+  
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+  
+      // When the user clicks anywhere outside of the modal, close it
+      
+      if (event.target == modal) {
+            modal.style.display = "none";
+          }
+      console.log("Opened Added Ingredients Modal");
+  
+    },
+
 };
 
-// ----- 
+// ----- SEND AJAX CALL FOR SPECIFIC RECIPE INFO BY ID
 
 $(document).on('click','.learnMore',function(){
   event.preventDefault();
@@ -662,6 +694,38 @@ $(document).on('click','.learnMore',function(){
 $(document).on('click','#addedRecipes',function(){
   event.preventDefault();
   recipeApp.openUserAddedRecipes();
+});
+
+//--------OPEN USER ADDED INGREDIENTS MODAL
+$(document).on('click','#addedIngredients',function(){
+  event.preventDefault();
+
+  $(".addedIngredients-modal-header").empty();
+  $(".addedIngredients-body").empty();
+
+  var theseIngredients = $(this).attr("these-ingredients");
+  console.log(theseIngredients);
+
+  splitIngredients = theseIngredients.split(", ");
+
+  var amountIngredients;
+  var unitIngredients;
+  
+  for (var i = 0; i < splitIngredients.length; i++) {
+
+    amounttIngredients = splitIngredients[i].split(" ");
+    // unitIngredients = theseIngredients[i].split(" ");
+    console.log(amountIngredients);
+    
+    // console.log(unitIngredients);
+  
+    var ingredientItem = $("<button>").attr("ingredient-name", splitIngredients[i]).addClass("w3-btn ingredientSpec").text(splitIngredients[i]).attr("id", "ingredient-item");
+      
+    // Adding the button to the buttons-view div
+    $(".addedIngredients-body").append(ingredientItem);
+    }
+
+  recipeApp.openUserAddedIngredients();
 });
 
 //--------OPEN SEARCH NEW RECIPE MODAL
@@ -825,7 +889,7 @@ $(document).on('click','#add-all',function(){
   }
 });
 
-//-------------CHECKOUT // PUSH SELECTED INGREDIENTS TO MASTER LIST
+//-------------CHECKOUT // Opens Shopping List
 
 $(document).one('click','#checkout',function(){
   event.preventDefault();
@@ -854,8 +918,7 @@ $("#add-recipe-btn").on("click", function(event) {
   var recipeDiet = $("#recipe-diet-input").val().trim();
   var recipeType = $("#recipe-type-input").val().trim();
   var recipeIngredients = $("#userAddedIngredients").val().trim();
- 
-  console.log(recipeIngredients);
+
 
   // Alert for recipe successfully addded.
 
@@ -907,8 +970,12 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   // console.log(recipeMin);
   // console.log(recipeDiet);
   // console.log(recipeType);
-  // console.log(recipeIngredients);
+  console.log(recipeIngredients);
 
-  $("#recipe-table > tbody").append("<tr class='w3-hover-blue'"+myIngredients+"><td>" + recipeName + "</td><td>" + recipeMin + "</td><td>" + recipeDiet + "</td><td>" + recipeType + "</td><td>" + recipeIngredients + "</td></tr>");
+  var recipeIngredientsArray = recipeIngredients.split(", ");
+ 
+  console.log(recipeIngredientsArray);
+
+  $("#recipe-table > tbody").append("<tr"+myIngredients+"><td>" + recipeName + "</td><td>" + recipeMin + "</td><td>" + recipeDiet + "</td><td>" + recipeType + "</td><td>" + "<button class='w3-btn' id = 'addedIngredients' these-ingredients='"+recipeIngredients+"'>View Ingredients</button>" + "</td></tr>");
 
 });

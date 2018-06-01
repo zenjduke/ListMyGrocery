@@ -71,14 +71,14 @@
 						<i class="fa fa-check-circle w3-text-red"></i> About</a>
 					<a href="#mainList1" class="w3-bar-item w3-button w3-large">
 						<i class="fas fa-utensils w3-text-red"></i> Search Recipes</a>
-					<a href="#mainList2" class="w3-bar-item w3-button w3-large">
-						<i class="fas fa-chart-pie w3-text-red"></i> Nutrition</a>
 					<a href="#addARecipebutton" class="w3-bar-item w3-button w3-large">
 						<i class="fas fa-plus w3-text-red"></i> Add Recipes</a>	
 					<a href="#recipe-tracker" class="w3-bar-item w3-button w3-large" id="addedRecipes">
 						<i class="fas fa-book w3-text-red"></i> My Recipes</a>
+					<a href="#mainList2" class="w3-bar-item w3-button w3-large">
+						<i class="fas fa-chart-pie w3-text-red"></i> Nutrition</a>
 					<a href="#complete" class="w3-bar-item w3-button w3-large">
-						<i class="fas fa-shopping-cart w3-text-red"></i> Make Your List</a>
+						<i class="fas fa-shopping-cart w3-text-red"></i>View Your List</a>
 					
 				</div>
 
@@ -142,9 +142,9 @@
 
 	<div class="w3-row">
 		<div class="w3-col w3-padding-16 w3-cell w3-cell-middle w3-center w3-xlarge w3-topbar w3-border-red w3-pale-red" id="aboutApp">
-			<p class="w3-padding-small">Not sure what to eat?
+			<p class="w3-padding-small">Search. List. Shop.
 				<span style="white-space: nowrap;">
-					<b style="font-family: 'Baloo Chettan', cursive;">LIST MY GROCERY</b> can help.</span>
+					<b style="font-family: 'Baloo Chettan', cursive;">LIST MY GROCERY.</b></span>
 			</p>
 		</div>
 	</div>
@@ -524,16 +524,16 @@
 					<!-- My Recipes -->
 					<div class="w3-content w3-container" id="recipe-tracker">
 						<div class="w3-cell-row w3-panel" id="recipeList1">
-							<div class="w3-cell w3-light-blue w3-margin" style="width:100%;">
+							<div class="w3-cell w3-margin" style="width:100%;">
 								<div class="w3-container w3-center">
-								<table class="table w3-table w3-bordered" id='recipe-table'>
+								<table class="table w3-table w3-bordered w3-striped" id='recipe-table'>
 									<thead>
 										<tr>
 										<th>Name</th>
 										<th>Prep Time</th>
 										<th>Diet</th>
 										<th>Meal Type</th>
-										<th>Ingredients</th>
+										<th>Select</th>
 										</tr>
 									</thead>
 									<tbody></tbody>
@@ -553,7 +553,25 @@
 		</div>
 	</div>
 
-<!-- Forth Parallax Image with Text -->
+	<!---Added Ingredients Modal -->
+	<div id="panel">
+		<div class="w3-modal" id="addedIngredientsModal">
+			<div class="w3-modal-content w3-animate-top w3-card-4">
+				<div class="w3-container w3-blue w3-display-container modal-header" id="addedIngredients-header">
+					<h1>Ingredients</h1>
+				</div>
+				<div class="w3-container addedIngredients-body modal-body">
+				</div>
+				<div class="w3-container w3-blue modal-footer" id="addedIngredients-footer">
+					<span class="addedIngredientsClose w3-text-black">
+						<i class="far fa-times-circle"></i>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- Forth Parallax Image with Text -->
 
 	<div class="bgimg-4 w3-display-container w3-opacity-min">
 		<div class="w3-display-middle" style="white-space:nowrap;">
