@@ -75,7 +75,7 @@
 						<i class="fas fa-chart-pie w3-text-red"></i> Nutrition</a>
 					<a href="#addARecipebutton" class="w3-bar-item w3-button w3-large">
 						<i class="fas fa-plus w3-text-red"></i> Add Recipes</a>	
-					<a href="#recipe-tracker" class="w3-bar-item w3-button w3-large">
+					<a href="#recipe-tracker" class="w3-bar-item w3-button w3-large" id="addedRecipes">
 						<i class="fas fa-book w3-text-red"></i> My Recipes</a>
 					<a href="#complete" class="w3-bar-item w3-button w3-large">
 						<i class="fas fa-shopping-cart w3-text-red"></i> Make Your List</a>
@@ -523,30 +523,48 @@
 			
 	</div>
 
-	<!-- My Recipes -->
-	<div class="w3-content w3-container" id="recipe-tracker">
-		<div class="w3-cell-row w3-panel" id="recipeList1">
-			<div class="w3-cell w3-light-grey w3-margin" style="width:100%;">
-				<div class="w3-container w3-center">
-		<h1>My Recipes</h1>
-			<table class="table w3-table w3-bordered w3-striped w3-hover-green" id='recipe-table'>
-			<thead>
-				<tr class="w3-light-grey">
-				<th>Name</th>
-				<th>Prep Time</th>
-				<th>Diet</th>
-				<th>Meal Type</th>
-				<th>Ingredients</th>
-				</tr>
-			</thead>
-			<tbody class="w3-hover-green">
-			</tbody>
-			</table>
-		</div>
+		<!--End Add Recipe Form Pop Up-->
+
+	<!---Added Recipes Modal -->
+	<div id="panel">
+		<div class="w3-modal" id="addedRecipesModal">
+			<div class="w3-modal-content w3-animate-top w3-card-4">
+				<div class="w3-container w3-green w3-display-container modal-header" id="addedRecipes-header"></div>
+				<div class="w3-container addedRecipes-body modal-body">
+
+
+					<!-- My Recipes -->
+					<div class="w3-content w3-container" id="recipe-tracker">
+						<div class="w3-cell-row w3-panel" id="recipeList1">
+							<div class="w3-cell w3-light-grey w3-margin" style="width:100%;">
+								<div class="w3-container w3-center">
+								<h1>My Recipes</h1>
+								<table class="table w3-table w3-bordered w3-striped" id='recipe-table'>
+									<thead>
+										<tr class="w3-light-grey">
+										<th>Name</th>
+										<th>Prep Time</th>
+										<th>Diet</th>
+										<th>Meal Type</th>
+										<th>Ingredients</th>
+										</tr>
+									</thead>
+									<tbody></tbody>
+									</table>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				<div class="w3-container w3-blue modal-footer" id="addedRecipes-footer">
+					<span class="addedRecipesClose w3-text-black">
+						<i class="far fa-times-circle"></i>
+					</span>
+				</div>
+			</div>
 		</div>
 	</div>
-	</div>
-	
 
 <!-- Forth Parallax Image with Text -->
 

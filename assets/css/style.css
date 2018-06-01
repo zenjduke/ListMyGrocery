@@ -163,7 +163,7 @@ input {
 /* POP UP MODAL SEARCH FORMS */
 
  /* New Recipe Search Modal */
-    .searchModal, .ingredientModal, .nutritionModal .yourRecipeModal{
+    .searchModal, .ingredientModal, .nutritionModal .yourRecipeModal, .addedRecipeModal{
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
         z-index: 1; /* Sit on top */
@@ -179,7 +179,7 @@ input {
 
 
     /* The Close Button */
-    .searchClose, .ingredientClose, .nutritionClose, .addClose {
+    .searchClose, .ingredientClose, .nutritionClose, .addClose, addedRecipesClose {
         color: rgb(255, 255, 255);
         position: absolute;
         top: 0;
@@ -196,7 +196,9 @@ input {
     .searchClose:hover,
     .searchClose:focus,
     .ingredientClose:hover,
-    .ingredientClose:focus {
+    .ingredientClose:focus
+    .addedRecipesClose:hover,
+    .addedRecipesClose:focus, {
         color: black;
         text-decoration: none;
         cursor: pointer;
