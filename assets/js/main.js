@@ -513,9 +513,13 @@ var recipeApp = {
               .then(function(response) {
         
                 console.log(response);
+
+                $(".nutrition-body").empty();
+                $(".nutrition-header").empty();
                 
-                // var nutritionTitle = $("<h1>").text(searchedNutrition);
-                var nutritionTitle = $("<h1>").text("1 large egg");
+                var nutritionTitle = $("<h1>").text(searchedNutrition);
+                // TESTING 
+                //var nutritionTitle = $("<h1>").text("1 large egg");
 
                  $("#nutrition-header").append(nutritionTitle);
 
@@ -532,21 +536,20 @@ var recipeApp = {
                  var fatNutrients = response.totalNutrients.FAT;
 
                  var calories = response.calories;
-                 console.log(calories);
 
                  var c = $("<h3>").text("Calories: 71 kcal");
              
                  var br = $("<br>");
 
-                //  var c = $("<h3>").text("Calories: "+calories+ " kcal");
-                //  var carbs = $("<h3>").text("Carbohydrates: "+carbNutrients.quantity+" "+carbNutrients.unit);
-                //  var protein = $("<h3>").text("Protein: "+proteinNutrients.quantity+" "+proteinNutrients.unit);
-                //  var fat = $("<h3>").text("Fat: "+fatNutrients.quantity+" "+fatNutrients.unit);
+                 var c = $("<h3>").text("Calories: "+calories+ " kcal");
+                 var carbs = $("<h3>").text("Carbohydrates: "+carbNutrients.quantity+" "+carbNutrients.unit);
+                 var protein = $("<h3>").text("Protein: "+proteinNutrients.quantity+" "+proteinNutrients.unit);
+                 var fat = $("<h3>").text("Fat: "+fatNutrients.quantity+" "+fatNutrients.unit);
 
                 //TESTING 
-                var carbs = $("<h3>").text("Carbohydrates: 23g");
-                var protein = $("<h3>").text("Protein: 44g");
-                var fat = $("<h3>").text("Fat: 14g");
+                // var carbs = $("<h3>").text("Carbohydrates: 23g");
+                // var protein = $("<h3>").text("Protein: 44g");
+                // var fat = $("<h3>").text("Fat: 14g");
 
                  $(".nutrition-body").append(c).append(br);
                  $(".nutrition-body").append(carbs).append(br);
@@ -601,12 +604,7 @@ var recipeApp = {
         }
       },
        
-        checkout: function(){
-        //Empty button div before rendering buttons
-        $(".w3-ul").empty();
-      
-        // Looping through the array of topics
-        for (var i = 0; i < masterList.length; i++) {
+        addIngredientToMaster: function(){
         
           var listItem = $("<li>").addClass("w3-bar w3-card-2 w3-margin");
     
@@ -624,7 +622,7 @@ var recipeApp = {
 
           var itemDiv = $("<div>").addClass("w3-bar-item");
 
-          var itemAmount = masterObject.amount[i];
+          // GET INPUT var itemAmount = masterObject.amount[i];
           var itemUnit = masterObject.unit[i];
           var itemName = masterObject.name[i];
 
@@ -643,7 +641,7 @@ var recipeApp = {
 
           $(".w3-ul").append(listItem);
 
-        }
+        
       },
 
 };
