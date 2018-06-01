@@ -86,7 +86,7 @@
 				 id="rightMenu">
 
 					<button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">
-						<i class="far fa-times-circle w3-xlarge w3-text-red w3-round-large w3-padding-large w3-light-gray"></i> Close My List</button>
+						<i class="far fa-times-circle w3-xlarge w3-text-red w3-round-large w3-padding-large w3-light-gray"></i><h3 style="text-align: center">Ingredient List</h3></button>
 					<ul class="w3-ul">
 						<li class="w3-bar w3-card-2 w3-margin">
 							<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-xlarge w3-right w3-round-large w3-margin">
@@ -96,14 +96,14 @@
 								<img src="assets/images/shopping/cut.svg" class="w3-bar-item w3-circle w3-hide-small w3-left" style="width:85px">
 							</div>
 							<div class="w3-bar-item">
-								<span class="w3-large">Ingrident List</span>
+								<span class="w3-large">Ingredients Appear Here</span>
 								<br>
-								<span>Show up here once you select recepy.</span>
+								<span>Search some recipes!</span>
 							</div>
 						</li>
 					</ul>
 					<button class="w3-bar-item w3-button w3-large">
-						<i class="fa fa-mobile w3-xlarge w3-text-red w3-round-large w3-padding-large w3-light-gray"></i> SMS My List</button>
+						<i class="fa fa-mobile w3-xlarge w3-text-red w3-round-large w3-padding-large w3-light-gray"></i>COMING SOON: Text My List</button>
 				</div>
 
 				<div>
@@ -219,7 +219,6 @@
 													<h4>Intolerances:</h4>
 												</label>
 
-												<!-- <input type="text" id="intol-input" placeholder="Keep me healthy."> -->
 												<div class="intolerances">
 
 													<span style="white-space: nowrap;" class="w3-margin-left w3-margin-right">
@@ -335,16 +334,16 @@
 				<div class="w3-section">
 					<!--By Ingredient Search Button-->
 					<div id="panel">
-						<button class="ingredientButton w3-button w3-border w3-border-red" value="What's in your fridge?" id="ingredientSearch">What's in your fridge?</button>
+						<button class="w3-button w3-border w3-border-red" value="What's in your fridge?" id="openIngredientSearch">What's in your fridge?</button>
 						<br>
-						<!---->
-						<!--New Recipe Search Form Pop Up-->
+						
+						<!--By Ingredient Search Form Pop Up-->
 
-						<div class="ingredentModal w3-modal" id="myIngredientModal">
+						<div class="ingredentModal w3-modal" id="byIngredientModal">
 							<div class="w3-modal-content w3-animate-top w3-card-4">
 								<div class="w3-container w3-pale-blue w3-display-container modal-header">
 									<h1>What's In Your Fridge?</h1>
-									<span class="ingredientClose w3-text-black">
+									<span class="byIngredientClose w3-text-black">
 										<i class="far fa-times-circle"></i>
 									</span>
 								</div>
@@ -354,7 +353,7 @@
 										<hr>
 										<input class="w3-input w3-border w3-light-grey" type="text" id="ingredient-input" placeholder="Tomato, Onion, Cilantro">
 										<hr>
-										<button class="w3-button w3-border w3-border-blue w3-pale-blue w3-margin" id="ingredient-search" type="submit" name="action">
+										<button class="w3-button w3-border w3-border-blue w3-pale-blue w3-margin" id="byIngredientSearch" type="submit" name="action">
 											<h3 class="w3-text-blue">
 												<i class="fa fa-search"></i> Search recipes</h3>
 										</button>
@@ -379,15 +378,15 @@
 
 	<div class="modal w3-modal" id="myModal">
 		<div class="w3-modal-content w3-animate-top w3-card-4">
-			<div class="w3-container w3-green w3-display-container modal-header"></div>
-			<div class="w3-container modal-body"></div>
+			<div class="w3-container w3-green w3-display-container recipeInfo-modal-header modal-header"></div>
+			<div class="w3-container recipeInfo-modal-body modal-body"></div>
 			<!-- Ingredient "buttons" are dumped here from ingredientArray -->
 			<div class="w3-container modal-ingredients w3-blue">
 				<h4>Ingredients</h4>
 				<p>Select ingredients to add to your master list individually, or add them all below.</p>
 				<div id="ingredient-view"></div>
 			</div>
-			<div class="w3-container w3-green modal-footer">
+			<div class="w3-container w3-green recipeInfo-modal-footer modal-footer">
 				<button class="w3-btn" id="add-all">Add all ingredients to master list.</button>
 				<span class="close">&times;</span>
 			</div>
@@ -426,7 +425,7 @@
 						<div class="form-group row">
 							<!--Nutrition Search Button-->
 							<div id="panel">
-								<!--Nutrition Modal Pop Up-->
+								<!--Nutrition Results Modal Pop Up-->
 								<div class="nutritionModal w3-modal" id="myNutritionModal">
 									<div class="w3-modal-content w3-animate-top w3-card-4">
 										<div class="w3-container w3-blue w3-display-container modal-header" id="nutrition-header"></div>
@@ -439,7 +438,7 @@
 									</div>
 								</div>
 							</div>
-							<!--End Add Recipe Form Pop Up-->
+							<!--End Nutrition Results Pop Up-->
 						</div>
 					</div>
 				
@@ -464,38 +463,22 @@
 
 									<div class="w3-modal-content w3-animate-top w3-card-4">
 
-										<div class="w3-container w3-pale-red w3-display-container modal-header">
+										<div class="w3-container w3-red w3-display-container modal-header">
 											<h3>Add a recipe from your personal cookbook.</h3>
-											<span class="addClose w3-text-black">
-												<i class="far fa-times-circle"></i>
-											</span>
 										</div>
 
 										<!-- Add Recipe Form In Modal-->
 										<div class="w3-container modal-body">
 											<div class="w3-container w3-center">
 												<img src="assets/images/party.svg" alt="Cooking New" style="width:20%; padding:10px 0;">
-												<h5>Save your recipes and add them to your Master List.</h5>
-												<div class="w3-section">
-										  
+												<h5 id="addSuccess">Save your recipes and ingredients to your master list.</h5>
+
 												<form class="w3-container"> 
 													<div class="form-group row">
 													<label for="recipe-name-input">Name:</label><br>
 													<input class="w3-input w3-border" id="recipe-name-input" type="text"><br>
-										
-													<div>
-														<h4>Please add all ingredients before saving your recipe.</h4>
-														<div id="myIngredient-view"></div>
-													</div>
-										
 													<label for="recipe-ingredient-input">Ingredients:</label><br>
-													<div class="w3-row-padding new-ingredient">   
-														<input class="w3-input w3-border" id="amount" type="text" placeholder="amount i.e. 1 or .5"><br>               
-														<input class="w3-input w3-border" id="unit" type="text" placeholder="unit i.e. tablespoon, cup, large"><br>                 
-														<input class="w3-input w3-border" id="name" type="text" placeholder="name i.e. sugar or chicken breast"><br>  
-													</div><br>
-													
-													<button class="w3-btn" id="add-ingredient-btn" type="submit">Add Ingredient</button><br>
+													<textarea id="userAddedIngredients" placeholder="i.e. 2 large chicken breast, 1 can black beans, 2 tablespoon chili powder" name="message"></textarea><br>							
 										
 													<label for="recipe-min-input">Prep Time:</label>
 													<input class="w3-input w3-border" id="recipe-min-input" type="text">
@@ -503,14 +486,17 @@
 													<input class="w3-input w3-border" id="recipe-diet-input" type="text">
 													<label for="recipe-type-input">Meal Type:</label>
 													<input class="w3-input w3-border" id="recipe-type-input" type="text"><br><br>
-													
-													<button class="w3-btn" id="add-recipe-btn" type="submit">Submit</button>
 													</div>
 												</form>
-												</div>
+											
 											</div>
 										</div>
-										<div class="w3-container w3-red modal-footer">To find best result, please fill all inputs.</div>
+										<div class="w3-container w3-red modal-footer">
+												<button class="w3-btn" id="add-recipe-btn" type="submit">Submit</button>
+											<span class="addClose w3-text-black">
+												<i class="far fa-times-circle"></i>
+											</span>
+										</div>
 									</div>								
 								</div>
 								<!--End Add Recipe MODAL Form Pop Up-->
@@ -572,7 +558,7 @@
 	<div class="bgimg-4 w3-display-container w3-opacity-min">
 		<div class="w3-display-middle" style="white-space:nowrap;">
 			<h1>
-				<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-text-light-gray">READY TO CHECKOUT?</span>
+				<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-text-light-gray">READY TO SHOP?</span>
 			</h1>
 		</div>
 	</div>
@@ -580,12 +566,10 @@
 	<!-- Checkout // Make List -->
 	<div class="w3-row w3-dark-gray w3-margin w3-padding-large" id="complete">
 		<div class="w3-col w3-center" id="mainList3">
-			<h3>Once you have found all your recipes and ingredients...</h3>
 			<button class="w3-button w3-border w3-border-red w3-pale-red w3-margin" id="checkout">
 				<h3 class="w3-text-red">
-					<i class="fa fa-shopping-cart"></i> Make Your List</h3>
+					<i class="fa fa-shopping-cart"></i> View My List</h3>
 			</button>
-			<h3>To view your master list in the Shopping Cart.</h3>
 		</div>
 	</div>
 

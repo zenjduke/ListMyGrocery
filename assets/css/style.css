@@ -25,6 +25,13 @@ input {
     width: 200px;
 }
 
+textarea {
+    border-width: 1px;
+    border-color: #eaeaea;
+    width: 90%;
+    height: 30%;
+}
+
 #navMenu .w3-sidebar {
 /*	height: auto !important;*/
 }
@@ -89,81 +96,81 @@ input {
 
 /* POP UP MODAL RECIPE INFO */
 
-        /* The Modal (background) */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        }
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
-        /* Modal Header */
-        .modal-header {
-            padding: 2px 16px;
-            background-color: #5cb85c;
-            color: white;
-            position: relative;
-        }
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+    position: relative;
+}
 
-        /* Modal Body */
-        .modal-body {padding: 2px 16px;}
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
 
-        /* Modal Footer */
-        .modal-footer {
-            padding: 2px 16px;
-            background-color: 21B251;
-            color: white;
-        }
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: 21B251;
+    color: white;
+}
 
-        /* Modal Content */
-        .modal-content {
-            position: relative;
-            background-color: #fefefe;
-            margin: auto;
-            padding: 0;
-            border: 1px solid #888;
-            width: 80%;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-            animation-name: animatetop;
-            animation-duration: 0.4s
-        }
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
 
-        /* Add Animation */
-        @keyframes animatetop {
-            from {top: -300px; opacity: 0}
-            to {top: 0; opacity: 1}
-        }
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
 
-        /* The Close Button */
-        .close {
-            color: rgb(255, 255, 255);
-            position: absolute;
-            top: 0;
-            right: 0;
-            font-size: 22px;
-            font-weight: bold;
-            padding-right: 10px;
-        }
-        
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
+/* The Close Button */
+.close {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 22px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 /*-----------------------------------
 
 /* POP UP MODAL SEARCH FORMS */
 
  /* New Recipe Search Modal */
-    .searchModal, .ingredientModal, .nutritionModal .yourRecipeModal, .addedRecipeModal{
+    .searchModal, .byIngredientModal, .nutritionModal .yourRecipeModal, .addedRecipeModal{
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
         z-index: 1; /* Sit on top */
@@ -179,10 +186,20 @@ input {
 
 
     /* The Close Button */
-    .searchClose, .ingredientClose, .nutritionClose, .addClose, addedRecipesClose {
+    .searchClose, .byIngredientClose, .nutritionClose, addedRecipesClose {
         color: rgb(255, 255, 255);
         position: absolute;
         top: 0;
+        right: 0;
+        font-size: 22px;
+        font-weight: bold;
+        padding-right: 10px;
+    }
+
+    .addClose {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        bottom: 0;
         right: 0;
         font-size: 22px;
         font-weight: bold;
