@@ -1,3 +1,8 @@
+.w3-premiumFont {
+  font-family: 'Wire One', sans-serif;
+  letter-spacing: 1px;
+}
+
 body, html {
     height: 100%;
     line-height: 1.8;
@@ -16,7 +21,7 @@ h3 {
 }
 
 h4, label, th {
-    font-family: 'Baloo Chettan', cursive;
+    
     font-size: 18px;
     text-transform: capitalize;
 }
@@ -297,7 +302,7 @@ textarea {
     color: white;
     padding-left: 10px;
     padding-right: 10px;
-    
+    line-height: normal;
 }
 
 #recipe-view {

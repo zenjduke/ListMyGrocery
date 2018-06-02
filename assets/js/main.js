@@ -107,34 +107,34 @@ var recipeApp = {
 
   openAddRecipe: function(){
 
-  // Get the modal
-  var modal = document.getElementById('yourRecipeModal');
+    // Get the modal
+    var modal = document.getElementById('yourRecipeModal');
 
-  // Get the button that opens the modal
-  var btn = document.getElementById("addRecipeButton");
+    // Get the button that opens the modal
+    var btn = document.getElementById("addRecipeButton");
 
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("addClose")[0];
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("addClose")[0];
 
-  // When the user clicks on the button, open the modal 
+    // When the user clicks on the button, open the modal 
 
-  modal.style.display = "block";
-  
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-  
-    if (event.target == modal) {
-          modal.style.display = "none";
-        }
+    modal.style.display = "block";
     
-    console.log("Opened Add Recipe Modal"); 
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+    
+      if (event.target == modal) {
+            modal.style.display = "none";
+          }
+      
+      console.log("Opened Add Recipe Modal"); 
   },
 
-    // ----- OPEN SEARCH BY INGREDIENT MODAL 
+  // ----- OPEN SEARCH BY INGREDIENT MODAL 
 
   openIngredientSearch: function(){
 
@@ -269,7 +269,6 @@ var recipeApp = {
 
   },
 
-  
   // Creates buttons for each ingredient in selected recipe. 
 
   listIngredients: function(){
@@ -370,7 +369,7 @@ var recipeApp = {
         var learnMoreBtn = $("<button>").attr("id", "learn-more").text("Learn more").addClass("w3-button w3-hover-red w3-display-bottomright w3-small w3-black learnMore").attr("recipeID", recipeID);
 
         // Creating a paragraph tag with the result recipe's title
-        var h = $("<h4>").text(title);
+        var h = $("<h5>").text(title);
 
         // Creating an image tag
         var recipeImage = $("<img>").addClass("recipeImage");
@@ -446,7 +445,7 @@ var recipeApp = {
       var learnMoreBtn = $("<button>").attr("id", "learn-more").text("Learn more").addClass("w3-button w3-hover-red w3-display-bottomright w3-small w3-black learnMore").attr("recipeID", recipeID);
 
       // Creating a paragraph tag with the result recipe's title
-      var h = $("<h4>").text(title);
+      var h = $("<h5>").text(title);
 
       // Creating an image tag
       var recipeImage = $("<img>").addClass("recipeImage");
@@ -471,6 +470,9 @@ var recipeApp = {
   // ----- PERFORM NUTRITION SEARCH (EDAMAM API AJAX CALL)
 
   nutritionSearch: function() {
+
+    $("#nutrition-header").empty();
+    $(".nutrition-body").empty();
 
     var searchedNutrition = $(".nutrition-input").val().trim();
 
@@ -544,7 +546,7 @@ var recipeApp = {
   
         var span = $("<span>").addClass("w3-button w3-white w3-xlarge w3-right w3-circle w3-margin").attr("onclick", "this.parentElement.style.display='none'");
 
-        var x = $("<i>").addClass("fa fa-close");
+        var x = $("<i>").addClass("far fa-times-circle");
 
         span.append(x);
 
@@ -556,11 +558,15 @@ var recipeApp = {
 
         var itemDiv = $("<div>").addClass("w3-bar-item");
 
-        // GET INPUT var itemAmount = masterObject.amount[i];
+        var itemAmount = masterObject.amount[i];
         var itemUnit = masterObject.unit[i];
         var itemName = masterObject.name[i];
 
         console.log(itemAmount);
+
+        // if (itemUnit == null){
+          
+        // }
 
         var nameSpan = $("<span>").addClass("w3-large");
 
@@ -796,7 +802,7 @@ $(document).on('click','#ingredient-item' ,function(){
   
   var span = $("<span>").addClass("w3-button w3-white w3-xlarge w3-right w3-circle w3-margin").attr("onclick", "this.parentElement.style.display='none'");
 
-  var x = $("<i>").addClass("fa fa-close");
+  var x = $("<i>").addClass("far fa-times-circle");
 
   span.append(x);
 
@@ -813,6 +819,17 @@ $(document).on('click','#ingredient-item' ,function(){
   var h = $("<h3>").text(name);
   nameSpan.append(h);
   var amountSpan = $("<span>").text(" "+amount+" "+unit);
+
+  console.log(amount);
+  console.log(unit);
+
+  if (amount == null){
+    var amountSpan = $("<span>").text(" ");
+  }
+
+  if (amount && unit == undefined){
+    var amountSpan = $("<span>").text(" ");
+  }
 
   itemDiv.append(nameSpan).append(amountSpan);
 
@@ -856,7 +873,7 @@ $(document).on('click','#add-all',function(){
 
     var span = $("<span>").addClass("w3-button w3-white w3-xlarge w3-right w3-circle w3-margin").attr("onclick", "this.parentElement.style.display='none'");
 
-    var x = $("<i>").addClass("fa fa-close");
+    var x = $("<i>").addClass("far fa-times-circle");
 
     span.append(x);
 

@@ -15,8 +15,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes">
 	<meta name="author" content="#teamAwesome" />
-	<meta name="description" content="#" />
-	<meta name="keywords" content="#" />
+	<meta name="description" content="List My Grocery" />
+	<meta name="keywords" content="Grocery, List, My, Kitchen, Food, Cook, Place, Visit, Recepe" />
 	<link rel="shortcut icon" type="image/ico" href="assets/images/party.ico" />
 
 	<!-- Firebase Reference -->
@@ -27,18 +27,19 @@
 
 
 	<!--Stylesheets-->
-
-	<!--Bootstrap-->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!--Reset CSS-->
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<!--Other CSS-->
-	<link rel="stylesheet" type="text/css" href="assets/css/w3.css">
-	<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-	 crossorigin="anonymous">
-	<!--Developer CSS-->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+		<!--Bootstrap-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!--Reset CSS-->
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<!--Other CSS-->
+		<link rel="stylesheet" type="text/css" href="assets/css/w3.css">
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Wire+One" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+		 crossorigin="anonymous">
+		<!--Developer CSS-->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 
 	<!--Document Title-->
@@ -52,74 +53,138 @@
 
 <body>
 
-	<!--Document Wrapper-->
+	<!-- Navigation -->
 
 	<div class="w3-top">
 
 		<header>
 
 			<nav>
-
+<!--
+				<div class="w3-display-middle" style="white-space:nowrap;">
+					<h1>
+						<span class="w3-center w3-padding-small w3-red w3-xxlarge w3-wide w3-animate-opacity w3-text-light-gray" id="myNavbar">&#160;LIST MY GROCERY</span>
+					</h1>
+				</div>
+-->
+				
+				<!-- navigation left menu -->
 				<div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-round-large w3-margin" style="display:none;" id="leftMenu">
 					<button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-xlarge w3-dark-gray">
 						<i class="far fa-times-circle"></i>
 					</button>
 					<div class="w3-bar w3-black w3-padding-small">MENU</div>
-					<a href="#" class="w3-bar-item w3-button w3-large">
+					<a href="#" onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large w3-border-bottom w3-hover-yellow">
 						<i class="fa fa-hashtag w3-text-red"></i> HOME</a>
-					<a href="#aboutApp" class="w3-bar-item w3-button w3-large">
+					<a href="#aboutApp" onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large w3-border-bottom w3-hover-yellow">
 						<i class="fa fa-check-circle w3-text-red"></i> About</a>
-					<a href="#mainList1" class="w3-bar-item w3-button w3-large">
-						<i class="fas fa-utensils w3-text-red"></i> Search Recipes</a>
-					<a href="#addARecipebutton" class="w3-bar-item w3-button w3-large">
+					<a href="#mainList1" onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large w3-border-bottom w3-hover-yellow">
+						<i class="fas fa-utensils w3-text-red"></i> Search Recipes</a>				
+					<a href="#addARecipebutton" onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large w3-border-bottom w3-hover-yellow">
 						<i class="fas fa-plus w3-text-red"></i> Add Recipes</a>	
-					<a href="#recipe-tracker" class="w3-bar-item w3-button w3-large" id="addedRecipes">
+					<a href="#recipe-tracker" onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large w3-border-bottom w3-hover-yellow" id="addedRecipes">
 						<i class="fas fa-book w3-text-red"></i> My Recipes</a>
-					<a href="#mainList2" class="w3-bar-item w3-button w3-large">
+					<a href="#checkout" onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large w3-border-bottom w3-hover-yellow">
+						<i class="fas fa-shopping-cart w3-text-red"></i> View My List</a>
+					<a href="#mainList2" onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large w3-border-bottom w3-hover-yellow">
 						<i class="fas fa-chart-pie w3-text-red"></i> Nutrition</a>
-					<a href="#complete" class="w3-bar-item w3-button w3-large">
-						<i class="fas fa-shopping-cart w3-text-red"></i>View Your List</a>
+					<div class="w3-bar w3-black w3-padding-small">Contact</div>
+					<a href="#" class="w3-bar-item w3-button w3-large w3-border-bottom w3-hover-yellow">
+						<i class="fas fa-copyright w3-text-red"></i> teamAwesome</a>
+					<p class="w3-bar-item w3-small w3-text-gray"><i class="fas fa-code w3-text-gray"></i> 18201a18d</p>
 					
 				</div>
+				<!-- navigation left menu ends -->
 
+				<!-- shopping cart right menu -->
 				<div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-round-large w3-margin" style="display:none;right:0;width:60%;"
 				 id="rightMenu">
 
-					<button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">
-						<i class="far fa-times-circle w3-xlarge w3-text-red w3-round-large w3-padding-large w3-light-gray"></i><h3 style="text-align: center">Ingredient List</h3></button>
+					<button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large"><i class="far fa-times-circle w3-xlarge w3-text-red w3-right w3-round-large w3-padding-large w3-light-gray"></i> <h3 class="w3-xxlarge w3-text-red w3-padding-large">Ingredient List</h3></button>
+					
 					<ul class="w3-ul">
 						<li class="w3-bar w3-card-2 w3-margin">
 							<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-xlarge w3-right w3-round-large w3-margin">
 								<i class="far fa-times-circle"></i>
 							</span>
 							<div>
-								<img src="assets/images/shopping/cut.svg" class="w3-bar-item w3-circle w3-hide-small w3-left" style="width:85px">
+								<img src="assets/images/shopping/mixer.svg" alt="icon" class="w3-bar-item w3-circle w3-hide-small w3-left" style="width:85px">
 							</div>
 							<div class="w3-bar-item">
-								<span class="w3-large">Ingredients Appear Here</span>
+								<span class="w3-large"><h3>#ListMyGrocery</h3></span>
 								<br>
-								<span>Search some recipes!</span>
+								<span id="timeSendSMS"></span>
 							</div>
 						</li>
 					</ul>
-					<button class="w3-bar-item w3-button w3-large">
-						<i class="fa fa-mobile w3-xlarge w3-text-red w3-round-large w3-padding-large w3-light-gray"></i>COMING SOON: Text My List</button>
+					
+					<button class="w3-bar-item w3-button w3-large w3-tooltip"><i class="fa fa-mobile w3-xlarge w3-text-red w3-round-large w3-padding-large w3-light-gray"></i> SMS My List <span class="w3-text w3-tag w3-premiumFont">Premium Members Only</span></button>
 				</div>
-
+				 <!-- shopping cart right menu ends -->				 
+				 
+				<!--navigation on screen-->
 				<div>
-					<button class="w3-btn w3-border w3-border-white w3-round-large w3-margin w3-xlarge w3-left w3-opacity-min w3-hover-opacity-off w3-red"
+					<!--left menu button-->
+					<button style="width: 60px;" class="w3-btn w3-border w3-border-white w3-round-large w3-margin w3-xlarge w3-left w3-opacity-min w3-hover-opacity-off w3-red"
 					 onclick="openLeftMenu()">
-						<i class="fa fa-bars w3-text-white"></i>
+						<i class="fa fa-bars w3-text-white" title="Menu"></i>
 					</button>
-					<button class="w3-btn w3-border w3-border-white w3-round-large w3-margin w3-xlarge w3-opacity-min w3-hover-opacity-off w3-red">
-						<a href="#complete">
-							<img src="assets/images/check.svg" alt="" width="23">
+					<!--Make Your List button-->
+					<button style="width: 60px;" class="w3-btn w3-border w3-border-white w3-round-large w3-margin-top w3-xlarge w3-opacity-min w3-hover-opacity-off w3-red">
+						<a href="#">
+							<i class="far fa-check-circle w3-text-white" title="Make Your List"></i>
 						</a>
 					</button>
-					<button class="w3-btn w3-border w3-border-white w3-round-large w3-margin w3-xlarge w3-right w3-opacity-min w3-hover-opacity-off w3-red"
+					<!--Shopping Cart button-->
+					<button style="width: 60px;" class="w3-btn w3-border w3-border-white w3-round-large w3-margin w3-xlarge w3-right w3-opacity-min w3-hover-opacity-off w3-red"
 					 onclick="openRightMenu()">
 						<i class="fa fa-shopping-cart w3-text-white"></i>
 					</button>
+					
+					<!--User log in button-->
+					<button style="width: 60px;" class="w3-btn w3-border w3-border-white w3-round-large w3-margin-top w3-right w3-xlarge w3-opacity-min w3-hover-opacity-off w3-red" onclick="document.getElementById('id01').style.display='block'">
+						<a href="#">
+							<i class="fas fa-user w3-text-white" title="User Log In"></i>
+						</a>
+						
+					</button>
+					
+							<!--					
+							Login form working on it for Premium Version
+							-->
+
+							<div id="id01" class="w3-modal">
+
+							  <div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px">
+								  <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright w3-large">×</span>
+
+								<div class="w3-center"><br>
+									<i class="fas fa-user-lock w3-text-red w3-circle w3-margin-top w3-xxxlarge" title="Avatar" style="width:40%"></i>
+								</div>
+
+								<div class="w3-container">
+								  <div class="w3-section">
+									<label><b>Premium User</b></label>
+									<input class="w3-input w3-border w3-hover-border-black w3-margin-bottom" type="text" placeholder="Enter Your Phone Number">
+
+									<label><b>Passcode</b></label>
+									<input class="w3-input w3-border w3-hover-border-black" type="text" placeholder="10 Digit Security Code">
+
+									<button class="w3-btn w3-btn-block w3-green w3-section">Login</button>
+									<input class="w3-check" type="checkbox" checked="checked"> Remember me
+								  </div>
+								</div>
+
+								<div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+								  <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-btn w3-red">Cancel</button>
+								  <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+								</div>
+
+							  </div>
+							</div>
+
+							<!--Finish Login form-->
+					
 				</div>
 
 			</nav>
@@ -138,33 +203,35 @@
 		</div>
 	</div>
 
-	<!--Process after steps	-->
+	<!-- About Section	-->
 
 	<div class="w3-row">
-		<div class="w3-col w3-padding-16 w3-cell w3-cell-middle w3-center w3-xlarge w3-topbar w3-border-red w3-pale-red" id="aboutApp">
-			<p class="w3-padding-small">Search. List. Shop.
+		<div class="w3-col w3-padding-16 w3-cell w3-cell-middle w3-center w3-large w3-topbar w3-border-red w3-pale-red" id="aboutApp">
+			<p class="w3-padding-small">Not sure what to eat?
 				<span style="white-space: nowrap;">
-					<b style="font-family: 'Baloo Chettan', cursive;">LIST MY GROCERY.</b></span>
+					<b class="w3-xxlarge w3-text-red" style="font-family: 'Baloo Chettan', cursive;">&#160;LIST MY GROCERY</b> can help.</span>
 			</p>
 		</div>
 	</div>
 
 	<div class="w3-row w3-bottombar w3-border-red">
-		<div class="w3-col s0 m3 w3-center w3-padding-large">
-			<a href="#aboutApp">
-				<img src="assets/images/process/commerce.svg" alt="" style="max-width:150px; ">
-			</a>
+		
+		<div class="w3-col m4 w3-center w3-padding-large">
+			<img src="assets/images/process/search.svg" alt="" style="max-width:100px;" class="w3-padding-large">
+			<p class="w3-text-dark-gray"><span class="w3-text-red">Search for a recipes</span> by craving, restrictions, or what you already have in your fridge.</p>
 		</div>
-		<div class="w3-col s12 m9 w3-padding-large w3-large">
-			<p class="w3-padding-large intro-paragraph" style="line-height: 2.5em;">
-				<ul class="w3-ul">
-					<li><b>Search for a recipes</b> by craving, restrictions, or what you already have in your fridge.</li>
-					<li>Review and <strong>add missing ingredients</strong> to your shopping list.</li>
-					<li>Search the nutritional value of your ingredients to <b>make sure you're fueling your body the right way.</b></li>
-				</ul>
-			</p>
+		<div class="w3-col m4 w3-center w3-padding-large">
+			<img src="assets/images/process/list.svg" alt="" style="max-width:100px;" class="w3-padding-large">
+			<p class="w3-text-dark-gray">Review and <span class="w3-text-red">add missing ingredients</span> to your shopping list.</p>
 		</div>
+		<div class="w3-col m4 w3-center w3-padding-large">
+			<img src="assets/images/process/food.svg" alt="" style="max-width:100px;" class="w3-padding-large">
+			<p class="w3-text-dark-gray"><span class="w3-text-red">Search the nutritional value</span> of your ingredients to make sure they are good for your body.</p>
+		</div>
+
 	</div>
+	
+	<!--About Section end-->
 
 	<!-- Second Parallax Image with Text -->
 
@@ -177,16 +244,16 @@
 	</div>
 
 	<!-- Container (Main Search Recipes Section) -->
-
+							
 	<div class="w3-row" id="mainList1">
 		<div class="w3-col m6 w3-light-gray w3-center">
 			<div class="w3-container w3-center">
 				<h3>Try something new!</h3>
-				<img src="assets/images/party.svg" alt="Cooking New" style="width:50%; padding:10px 0;">
+				<img src="assets/images/party.svg" alt="Cooking New" style="max-height: 200px;">
 				<h5>Find a recipe that is the perfect fit.</h5>
 				<div class="w3-section">
 					<form>
-						<div class="form-group row">
+						<div class="form-group row">							
 
 							<!--New Recipe Search Button-->
 							<div id="panel">
@@ -208,15 +275,15 @@
 										<div class="w3-container modal-body">
 											<form id="complex-search-form">
 												<label class="w3-text-red" for="query-input">
-													<h4>What sounds good?</h4>
+													What sounds good?
 												</label>
 												<input class="w3-input w3-border w3-light-grey" type="text" id="food-input" placeholder="A burger? A salad?">
 												<label class="w3-text-dark-gray" for="exclude-input">
-													<h4>Hate olives? Exclude them here.</h4>
+													Hate olives? Exclude them here.
 												</label>
 												<input class="w3-input w3-border w3-light-grey" type="text" id="exclude-input" placeholder="Exclude these ingredients.">
 												<label class="w3-text-dark-gray" for="intol-input">
-													<h4>Intolerances:</h4>
+													Intolerances:
 												</label>
 
 												<div class="intolerances">
@@ -303,7 +370,7 @@
 															<option value="breakfast">Breakfast</option>
 															<option value="beverage">Beverage</option>
 															<option value="sauce">Sauce</option>
-															<option value="Drink">Drink</option>t</option>
+															<option value="Drink">Drink</option>
 														</select>
 													</div>
 												</div>
@@ -329,11 +396,12 @@
 		<div class="w3-col m6 w3-light-blue w3-center">
 			<div class="w3-container w3-center">
 				<h3>What's in your fridge?</h3>
-				<img src="assets/images/cold.svg" alt="Cooking New" style="width:50%; padding:10px 0;">
+				<img src="assets/images/cold.svg" alt="Cooking from fridge"  style="max-height: 200px;">
 				<h5>Save time, save money.</h5>
-				<div class="w3-section">
+				<div class="w3-section">					
+					
 					<!--By Ingredient Search Button-->
-					<div id="panel">
+					<div id="panel10">
 						<button class="w3-button w3-border w3-border-red" value="What's in your fridge?" id="openIngredientSearch">What's in your fridge?</button>
 						<br>
 						
@@ -357,6 +425,7 @@
 											<h3 class="w3-text-blue">
 												<i class="fa fa-search"></i> Search recipes</h3>
 										</button>
+									</label>
 								</div>
 								<div class="w3-container w3-blue modal-footer">For best results, separate ingredients by comma and no spaces.</div>
 							</div>
@@ -410,27 +479,30 @@
 
 	<div class="w3-row" id="mainList2">
 		
-		<div class="w3-col m6 w3-light-blue w3-center">
+		<div class="w3-col m6 w3-light-blue w3-center" style="height: 385px;">
 			<div class="w3-container w3-center">
 				<h3>What's In Your Food?</h3>
-				<img src="assets/images/apple.png" alt="Cooking New" style="width:32%; padding:10px 0;">
+				<img src="assets/images/apple.png" alt="Nutrition" style="max-height: 120px;">
 				<h5>Search nutrition information by ingredient and amount.</h5>
-				<hr>
-					<input class="nutrition-input w3-input" placeholder="1 large egg or 1 bowl of rice">
-				<hr>
-					<button class="w3-button w3-border w3-border-red" id="nutrition-search">Search</button>
+				
+				
+				<div class="w3-row w3-margin">
+					<input class="nutrition-input w3-input" placeholder="1 large egg or 1 bowl of rice" required>
+				</div>
+				
+				<button class="w3-button w3-border w3-border-red" id="nutrition-search">Search</button>
 				<br/>
 					<div class="w3-section">	
 					
 						<div class="form-group row">
 							<!--Nutrition Search Button-->
-							<div id="panel">
+							<div id="panel20">
 								<!--Nutrition Results Modal Pop Up-->
 								<div class="nutritionModal w3-modal" id="myNutritionModal">
 									<div class="w3-modal-content w3-animate-top w3-card-4">
 										<div class="w3-container w3-blue w3-display-container modal-header" id="nutrition-header"></div>
 										<div class="w3-container nutrition-body modal-body"></div>
-										<div class="w3-container w3-blue modal-footer" id="nutrition-footer">
+										<div class="w3-container w3-blue modal-footer w3-padding-large" id="nutrition-footer">
 											<span class="nutritionClose w3-text-black">
 												<i class="far fa-times-circle"></i>
 											</span>
@@ -445,16 +517,16 @@
 			</div>
 		</div>
 
-		<div class="w3-col m6 w3-light-gray w3-center" id="addARecipebutton">
+		<div class="w3-col m6 w3-light-gray w3-center" id="addARecipebutton"  style="height: 385px;">
 			<div class="w3-container w3-center">
 				<h3>Add Your Own Recipe!</h3>
-				<img src="assets/images/food.png" alt="Cooking New" style="width:50%; padding:10px 0;">
-				<h5>Add a recipe from your personal cookbook.</h5>
+				<img src="assets/images/food.png" alt="Add Recipe" style="max-height: 175px;">
+				<h5>Add your personal cookbook recipe.</h5>
 				<div class="w3-section">
 						<div class="form-group row">
 							<!--New Recipe Search Button-->
-							<div id="panel">
-								<button class="w3-button w3-border w3-border-red" id="addRecipeButton" value="Search!" id="addRecipeButton">Add A Recipe!</button>
+							<div id="panel30">
+								<button class="w3-button w3-border w3-border-red" value="Search!" id="addRecipeButton">Add A Recipe!</button>
 								<br>
 								<!---->
 
@@ -512,7 +584,7 @@
 		<!--End Add Recipe Form Pop Up-->
 
 	<!---Added Recipes Modal -->
-	<div id="panel">
+	<div id="panel40">
 		<div class="w3-modal" id="addedRecipesModal">
 			<div class="w3-modal-content w3-animate-top w3-card-4">
 				<div class="w3-container w3-blue w3-display-container modal-header" id="addedRecipes-header">
@@ -526,7 +598,7 @@
 						<div class="w3-cell-row w3-panel" id="recipeList1">
 							<div class="w3-cell w3-margin" style="width:100%;">
 								<div class="w3-container w3-center">
-								<table class="table w3-table w3-bordered w3-striped" id='recipe-table'>
+								<table class="table w3-table w3-bordered w3-striped" id="recipe-table">
 									<thead>
 										<tr>
 										<th>Name</th>
@@ -554,7 +626,7 @@
 	</div>
 
 	<!---Added Ingredients Modal -->
-	<div id="panel">
+	<div id="panel50">
 		<div class="w3-modal" id="addedIngredientsModal">
 			<div class="w3-modal-content w3-animate-top w3-card-4">
 				<div class="w3-container w3-blue w3-display-container modal-header" id="addedIngredients-header">
@@ -563,6 +635,7 @@
 				<div class="w3-container addedIngredients-body modal-body">
 				</div>
 				<div class="w3-container w3-blue modal-footer" id="addedIngredients-footer">
+					<!-- <button class="w3-btn" id="user-add-all">Add all ingredients to master list.</button> -->
 					<span class="addedIngredientsClose w3-text-black">
 						<i class="far fa-times-circle"></i>
 					</span>
@@ -573,23 +646,14 @@
 
     <!-- Forth Parallax Image with Text -->
 
-	<div class="bgimg-4 w3-display-container w3-opacity-min">
+	<div class="bgimg-4 w3-display-container w3-opacity-min" id="checkout">
 		<div class="w3-display-middle" style="white-space:nowrap;">
 			<h1>
-				<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-text-light-gray">READY TO SHOP?</span>
+				<span class="w3-button w3-hover-red w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-text-light-gray"><i class="fa fa-shopping-cart"></i> VIEW MY LIST</span>
 			</h1>
 		</div>
 	</div>
 
-	<!-- Checkout // Make List -->
-	<div class="w3-row w3-dark-gray w3-margin w3-padding-large" id="complete">
-		<div class="w3-col w3-center" id="mainList3">
-			<button class="w3-button w3-border w3-border-red w3-pale-red w3-margin" id="checkout">
-				<h3 class="w3-text-red">
-					<i class="fa fa-shopping-cart"></i> View My List</h3>
-			</button>
-		</div>
-	</div>
 
 	<!-- Footer -->
 	<footer id="footer" class="w3-center w3-green w3-padding-16 w3-opacity w3-hover-black w3-hover-opacity-off">
@@ -603,6 +667,11 @@
 
 	<!--External JavaScripts-->
 	<script src="assets/js/main.js" type="text/javascript"></script>
+	<script>
+		var d = new Date();
+		document.getElementById("timeSendSMS").innerHTML = d;
+	</script>
+	
 
 </body>
 
